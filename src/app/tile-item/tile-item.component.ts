@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { TileItem } from './tile-item.model';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-tile-item',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tile-item.component.css']
 })
 export class TileItemComponent implements OnInit {
+ @Input() tile: TileItem;
 
   constructor() { }
 
   ngOnInit() {
   }
-
 }

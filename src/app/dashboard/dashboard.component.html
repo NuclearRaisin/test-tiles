@@ -1,1 +1,11 @@
-<p>dashboard works!</p>
+<div class="header">
+    <div class="title">{{this.title | uppercase}}</div>
+    <div class="subtitle">{{this.subtitle}}</div>
+</div>
+    <mat-grid-list role="list" [cols]="smallScreen?.matches ? 1 : 12">
+        <mat-grid-tile  [rowspan]="smallScreen?.matches ? 1 : 4" [colspan]="smallScreen?.matches ? 1 : 4" *ngFor="let tile of tiles">
+            <app-tile-item role="listitem"[tile]="tile"></app-tile-item>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <!-- <div class="container" >
+    </div> -->
